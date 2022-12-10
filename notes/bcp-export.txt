@@ -1,0 +1,1 @@
+bcp Atelier.dbo.Magicien out C:\SQL_2211_1\export\Magicien.csv -c -t; -S <nom_du_serveur> -T

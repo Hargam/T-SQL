@@ -1,0 +1,21 @@
+MySQL :
+
+CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'mysql';
+GRANT ALL PRIVILEGES ON *.* TO 'mysql'@'localhost';
+FLUSH PRIVILEGES;
+
+
+
+MSSQL :
+
+Use master
+GO
+CREATE LOGIN Connexion1 WITH PASSWORD = 'Connexion1'
+GO
+
+USE ATELIER
+GO
+CREATE USER UserConnX1 FOR LOGIN Connexion1
+GO
+GRANT SELECT, UPDATE, DELETE, INSERT ON TableA TO UserConnX1
+GO

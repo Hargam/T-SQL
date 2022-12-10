@@ -1,0 +1,15 @@
+DECLARE 
+
+    @NomFic NVARCHAR(MAX)
+
+BEGIN
+
+    SET @NomFic = 'C:\SQL_2211_1\BKP\Atelier_C_' 
+                + FORMAT( GETDATE() , 'yyMMdd_HHmmss' )
+                + '.bak'
+
+    PRINT @NomFic
+
+    BACKUP DATABASE Atelier TO DISK = @NomFic 
+
+END
